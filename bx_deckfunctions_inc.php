@@ -1,7 +1,7 @@
 <pre>
 <?php
 //------------------------------
-// Name: f_deckfucntions_inc.php
+// Name: bx_deckfucntions_inc.php
 // Version: 0.0.1
 // Date: 01/20/13
 //------------------------------
@@ -41,15 +41,7 @@ function f_deckbuilder($num_decks, $game_type)
 	$cards = range(1,13);
 	$tempbuiltdeck = array();
 	$GLOBALS['totalcards'] = CARDS * $num_decks;
-	
-	if (DEBUG2) 
-	{
-		echo "Number of Decks to use: $num_decks <br>";
-		echo "Game Type to play: $game_type <br>";
-		var_dump($suits);
-		var_dump($cards);
-	}
-	
+		
 	$i = 0;
 	while ($i < $GLOBALS['totalcards'])
 	{
@@ -77,9 +69,6 @@ function f_decksort(&$builtdeck, $numbershuffles)
 	{
 		shuffle($builtdeck);
 		$i++;
-		
-			echo "Shuffle deck pass $i <br>";
-			var_dump($builtdeck);
 	}
 }
 
